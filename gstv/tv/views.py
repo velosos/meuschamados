@@ -12,7 +12,7 @@ def home(request,template_name="index.html"):
 
 
 	# Set the request parameters
-    url = 'https://devglobo.service-now.com/api/now/table/sys_user_group?sysparm_query=active%3Dtrue%5EtypeISEMPTY'
+    url = 'https://globo.service-now.com/api/now/table/sys_user_group?sysparm_query=active%3Dtrue%5EtypeISEMPTY'
 
 # Eg. User name="admin", Password="admin" for this code sample.
     user = 'meugs'
@@ -42,7 +42,7 @@ def chamados(request,value):
     value = request.POST.get('valor')
 
 
-    url = 'https://devglobo.service-now.com/api/now/table/task?sysparm_query=active%3Dtrue%5Eassignment_group%3D' + value
+    url = 'https://globo.service-now.com/api/now/table/task?sysparm_query=active%3Dtrue%5Eassignment_group%3D' + value
 
 # Eg. User name="admin", Password="admin" for this code sample.
     user = 'meugs'
