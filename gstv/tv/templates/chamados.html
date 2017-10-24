@@ -1,0 +1,114 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Tema opcional -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Última versão JavaScript compilada e minificada -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+   <style type="text/css">
+
+   .table{
+
+   
+
+
+   }
+
+   
+
+    .blink { text-decoration: blink; }
+
+    .limit{
+
+
+    	white-space: nowrap;
+  		overflow: hidden;
+  		text-overflow: ellipsis;
+  		max-width: 400px;
+  		max-height: 100px;
+
+
+    }
+
+    .limit_tr{
+
+
+    	width: 900px;
+    }
+
+   </style>
+<!-- 
+<p> Chamados na fila: {{ fila }} </p>
+{% for i in obj %}
+
+
+
+
+
+
+</p>
+
+
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+  	{% if i.state == '3'  %}
+
+<h3><span class="label label-danger">NOVO</span></h3>
+
+{% endif %}
+    <div class="thumbnail">
+      <div class="caption">
+        <h3>{{i.number}}</h3>
+        <p>Criado por: {{i.sys_created_by}}</p>
+        <p>Aberto em: {{i.opened_at}}</p>
+        
+        <p> <i>{{i.description}} </i> </p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div> 
+
+{% endfor %}     
+
+
+
+</div>
+</div>
+--> 
+
+<div class="container"> 
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      
+      <th>HORÁRIO</th>
+      
+      <th>ABERTO POR</th>
+      <th>NºCHAMADO</th>
+      <th>DESCRIÇÃO</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in obj %}
+    <tr class="limit_tr">
+     
+
+      
+      <td>{{i.opened_at}}</td>
+     <!-- <td><h3><span class="label label-danger blink">AGUARDANDO ATENDIMENTO  </span></h3></td> -->  
+      <td>{{i.sys_created_by }}</td>
+      <td>{{i.number}}</td>
+      <td class="limit">{{i.description}}</td>
+     
+      <!-- |linebreaksbr --> 
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+</div> 
