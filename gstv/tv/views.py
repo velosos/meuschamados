@@ -12,11 +12,11 @@ def home(request,template_name="index.html"):
 
 
 	# Set the request parameters
-    url = 'https://globo.service-now.com/api/now/table/sys_user_group?sysparm_query=active%3Dtrue%5EtypeISEMPTY'
+    url = 'https://your_instance.service-now.com/api/now/table/sys_user_group?sysparm_query=active%3Dtrue%5EtypeISEMPTY'
 
 # Eg. User name="admin", Password="admin" for this code sample.
-    user = 'meugs'
-    pwd = 'globo123'
+    user = 'user'
+    pwd = 'password'
 
 # Set proper headers
     headers = {"Content-Type":"application/json","Accept":"application/json"}
@@ -42,11 +42,11 @@ def chamados(request,value):
     value = request.POST.get('valor')
 
 
-    url = 'https://globo.service-now.com/api/now/table/task?sysparm_query=active%3Dtrue%5Eassignment_group%3D' + value
+    url = 'https://your_instance.service-now.com/api/now/table/task?sysparm_query=active%3Dtrue%5Eassignment_group%3D' + value
 
 # Eg. User name="admin", Password="admin" for this code sample.
-    user = 'meugs'
-    pwd = 'globo123'
+    user = 'user'
+    pwd = 'password'
 
 # Set proper headers
     headers = {"Content-Type":"application/json","Accept":"application/json"}
